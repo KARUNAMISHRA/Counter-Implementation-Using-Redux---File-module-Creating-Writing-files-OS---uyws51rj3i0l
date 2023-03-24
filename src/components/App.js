@@ -10,9 +10,8 @@ function App() {
         <div data-testid='counter'>{counter}</div>
         <button onClick={()=>dispatch(addNumber())}>+</button>
         <button onClick={()=>dispatch(subNumber())}>-</button>
- // karuna sagar mishra 
     </div>
   );
 }
-
+// karunasagar mishra
 export default App;
