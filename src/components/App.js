@@ -1,24 +1,15 @@
  import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { incrementCounter, decrementCounter } from '../actions/action';
+import { useDispatch, useSelector } from 'react-redux';
+import { addNumber, subNumber } from '../actions/action';
 
 function App() {
-  const counter = useSelector(state => state.counter);
-  const dispatch = useDispatch();
-
-  const handleIncrement = () => {
-    dispatch(incrementCounter());
-  };
-
-  const handleDecrement = () => {
-    dispatch(decrementCounter());
-  };
-
+  const counter = useSelector((state)=>state.counter);
+  const dispatch = useDispatch()
   return (
     <div id='main'>
-      <button onClick={handleIncrement}>+</button>
-      <span data-testid='counter'>{counter}</span>
-      <button onClick={handleDecrement}>-</button>
+        <div data-testid='counter'>{counter}</div>
+        <button onClick={()=>dispatch(addNumber())}>+</button>
+        <button onClick={()=>dispatch(subNumber())}>-</button>
     </div>
   );
 }
