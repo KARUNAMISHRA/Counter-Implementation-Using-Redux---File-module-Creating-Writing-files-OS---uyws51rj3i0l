@@ -1,11 +1,10 @@
- export const incrementCounter = () => {
-  return {
-    type: 'INCREMENT'
-  };
-};
-
-export const decrementCounter = () => {
-  return {
-    type: 'DECREMENT'
-  };
-};
+ export const addNumber = ()=>{
+    return {
+        type:'INCREMENT'
+    }
+}
+export const subNumber = ()=>{
+    return {
+        type:'DECREMENT'
+    }
+}
