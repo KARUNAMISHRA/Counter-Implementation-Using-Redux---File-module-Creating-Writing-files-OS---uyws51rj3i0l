@@ -1,4 +1,4 @@
- export const addNumber = ()=>{
+export const addNumber = ()=>{
     return {
         type:'INCREMENT'
     }
